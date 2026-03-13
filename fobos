@@ -171,7 +171,7 @@ jobs         = 10
 [template-static-gnu-debug-zlib]
 compiler     = gnu
 cflags       = $CSTATIC_GNU $DEBUG_GNU -DVTKFORTRAN_USE_ZLIB
-lflags       = $DEBUG_GNU -lz
+lflags       = $DEBUG_GNU -Wl,--no-as-needed -lz -Wl,--as-needed
 mod_dir      = ./mod/
 obj_dir      = ./obj/
 src          = ./src/
